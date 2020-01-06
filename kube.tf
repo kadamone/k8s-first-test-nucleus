@@ -25,16 +25,16 @@ resource "google_container_cluster" "kube" {
   location  = var.google_region
 
 #  node_locations = ["us-central1-a"]
-#  network = google_compute_network.vpc.self_link
-#  subnetwork = google_compute_subnetwork.container_subnetwork.name
+  network = google_compute_network.vpc.self_link
+  subnetwork = google_compute_subnetwork.container_subnetwork.name
 
   remove_default_node_pool = true
   initial_node_count = 1
 
-#  ip_allocation_policy {
-#    cluster_ipv4_cidr_block   = "10.0.0.0/16"
-#    services_ipv4_cidr_block  = "10.1.0.0/16"
-#  }
+  ip_allocation_policy {
+    cluster_ipv4_cidr_block   = "10.0.0.0/16"
+    services_ipv4_cidr_block  = "10.1.0.0/16"
+  }
 
   master_auth {
     client_certificate_config {
@@ -42,18 +42,18 @@ resource "google_container_cluster" "kube" {
     }
   }
 
-#  lifecycle {
-#    ignore_changes = [node_pool, master_auth]
-#  }
+  lifecycle {
+    ignore_changes = [node_pool, master_auth]
+  }
 
   depends_on = [
-    google_project_service.serviceusage
-#    google_project_service.container,
-#    google_project_service.compute,
-#    google_project_service.storage_api,
-#    google_project_service.storage_component,
-#    google_project_service.monitoring,
-#    google_project_service.logging
+    google_project_service.serviceusage,
+    google_project_service.container,
+    google_project_service.compute,
+    google_project_service.storage_api,
+    google_project_service.storage_component,
+    google_project_service.monitoring,
+    google_project_service.logging
   ]
 }
 
