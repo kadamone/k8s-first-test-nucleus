@@ -37,6 +37,12 @@ variable "k8s_cluster_name" {
 #    }))
 #}
 
+# HELM
+
+variable "tiller_version" {
+  default = "v2.15.1"
+}
+
 # DNS
 
 #variable "dns_domain" {}

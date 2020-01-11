@@ -1,15 +1,15 @@
+data "google_project" "project" {}
+
+data "google_client_config" "default" {}
+
 resource "google_project_service" "serviceusage" {
   service = "serviceusage.googleapis.com"
-
-  #disable_dependent_services = true
 }
 
 resource "google_project_service" "compute" {
   service = "compute.googleapis.com"
 
   depends_on = [google_project_service.serviceusage]
-
-  #disable_dependent_services = true
 }
 
 resource "google_project_service" "container" {
@@ -22,8 +22,6 @@ resource "google_project_service" "container" {
     google_project_service.compute,
     google_project_service.containerregistry
   ]
-
-#  disable_dependent_services = true
 }
 
 resource "google_project_service" "containerregistry" {
@@ -33,8 +31,6 @@ resource "google_project_service" "containerregistry" {
     google_project_service.storage_api,
     google_project_service.serviceusage
   ]
-
-#  disable_dependent_services = true
 }
 
 resource "google_project_service" "storage_component" {
@@ -47,11 +43,8 @@ resource "google_project_service" "storage_api" {
   service = "storage-api.googleapis.com"
 
   depends_on = [
-    google_project_service.serviceusage,
-#    google_project_service.containerregistry
+    google_project_service.serviceusage
   ]
-
-#  disable_dependent_services = true
 }
 
 resource "google_project_service" "iam" {
@@ -63,15 +56,23 @@ resource "google_project_service" "iam" {
 resource "google_project_service" "logging" {
   service = "logging.googleapis.com"
 
-  #disable_dependent_services = true
-
   depends_on = [google_project_service.serviceusage]
 }
 
 resource "google_project_service" "monitoring" {
   service = "monitoring.googleapis.com"
 
-  #disable_dependent_services = true
+  depends_on = [google_project_service.serviceusage]
+}
+
+resource "google_project_service" "dns" {
+  service = "dns.googleapis.com"
+
+  depends_on = [google_project_service.serviceusage]
+}
+
+resource "google_project_service" "network" {
+  service = "servicenetworking.googleapis.com"
 
   depends_on = [google_project_service.serviceusage]
 }
