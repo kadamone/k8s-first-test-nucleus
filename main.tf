@@ -42,9 +42,7 @@ resource "google_project_service" "storage_component" {
 resource "google_project_service" "storage_api" {
   service = "storage-api.googleapis.com"
 
-  depends_on = [
-    google_project_service.serviceusage
-  ]
+  depends_on = [google_project_service.serviceusage]
 }
 
 resource "google_project_service" "iam" {
@@ -73,6 +71,12 @@ resource "google_project_service" "dns" {
 
 resource "google_project_service" "network" {
   service = "servicenetworking.googleapis.com"
+
+  depends_on = [google_project_service.serviceusage]
+}
+
+resource "google_project_service" "sqladmin" {
+  service = "sqladmin.googleapis.com"
 
   depends_on = [google_project_service.serviceusage]
 }
