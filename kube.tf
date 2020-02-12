@@ -22,7 +22,7 @@
 
 resource "google_container_cluster" "kube" {
   name      = var.k8s_cluster_name
-  location  = var.google_region
+  location  = "us-central1-a"#var.google_region
 
 #  node_locations = ["us-central1-a"]
   network = google_compute_network.vpc.self_link
@@ -60,7 +60,7 @@ resource "google_container_cluster" "kube" {
 resource "google_container_node_pool" "kube_nodes" {
 #  for_each    = local.k8s_node_pools
 
-  location    = var.google_region
+  location    = "us-central1-a" #var.google_region
 
   name        = "kadamone-node"#each.key
   cluster     = google_container_cluster.kube.name
@@ -68,7 +68,7 @@ resource "google_container_node_pool" "kube_nodes" {
   node_count  = 1#each.value.node_count
 
   node_config {
-    machine_type = "f1-micro"#each.value.machine_type
+    machine_type = "n1-standard-1"#each.value.machine_type
 
 #    dynamic "taint" {
 #      for_each = each.value.taints

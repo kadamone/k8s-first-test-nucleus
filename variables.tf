@@ -7,7 +7,9 @@ variable "google_project_id" {
 variable "google_region" {
   default = "us-central1"
 }
-#variable "google_zone" {}
+variable "google_zone" {
+  default = "us-central1-a"
+}
 #variable "environment_name" {}
 
 # Kubernetes - K8S
@@ -49,8 +51,8 @@ variable "k8s_namespaces" {
     name                = "false-namespace"
 #    has_public_ip       = true
 #    dns_records         = {}
-    uses_mysql          = true
-    uses_postgres       = true
+    uses_mysql          = false
+    uses_postgres       = false
 #    uses_mongodb_atlas  = false
 #    uses_slack_alert    = false
     }]
@@ -62,17 +64,41 @@ variable "tiller_version" {
   default = "v2.15.1"
 }
 
+# flux
+
+variable "flux_git_url" {
+  default = "git@github.com:kadamone"
+}
+
+variable "flux_git_path" {
+  default = "/k8s-first-test-nucleus.git"
+}
+
+variable "flux_version" {
+  default = "1.15.0"
+}
+
+variable "flux_enabled" {
+  default = true
+  type = bool
+}
+
+variable "flux_manifest_generation" {
+  default = true
+  type = bool
+}
+
 # POSTGRES
 variable "postgres_machine_type" {
   default = "db-f1-micro"
 }
 
-variable "postgres_badatase_version" {
+variable "postgres_database_version" {
   default = "POSTGRES_11" # Postgres version
 }
 
 variable "postgres_enabled" {
-  default = true # Enable and disable postgres
+  default = false # Enable and disable postgres
   type = bool
 }
 

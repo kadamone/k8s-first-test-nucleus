@@ -51,7 +51,7 @@ resource "kubernetes_config_map" "mysql_config" {
     publicIp  = google_sql_database_instance.mysql_db.0.public_ip_address
 
     port = "3306"
-    connetionName = google_sql_database_instance.mysql_db.0.connection_name
+    connectionName = google_sql_database_instance.mysql_db.0.connection_name
   }
 }
 

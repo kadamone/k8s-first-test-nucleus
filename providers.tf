@@ -5,7 +5,6 @@ provider "google" {
   project = var.google_project_id
   region  = var.google_region
   #zone    = var.zone
-  # project = "flask-app-262012"
 }
 
 provider "kubernetes" {
