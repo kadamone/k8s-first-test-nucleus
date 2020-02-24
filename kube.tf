@@ -65,7 +65,7 @@ resource "google_container_node_pool" "kube_nodes" {
   name        = "kadamone-node"#each.key
   cluster     = google_container_cluster.kube.name
 
-  node_count  = 1#each.value.node_count
+  node_count  = 3#each.value.node_count
 
   node_config {
     machine_type = "n1-standard-1"#each.value.machine_type

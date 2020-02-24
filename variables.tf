@@ -71,11 +71,11 @@ variable "flux_git_url" {
 }
 
 variable "flux_git_path" {
-  default = "/k8s-first-test-nucleus.git"
+  default = "/"
 }
 
 variable "flux_version" {
-  default = "1.15.0"
+  default = "1.18.0"
 }
 
 variable "flux_enabled" {
@@ -120,3 +120,13 @@ variable "mysql_enabled" {
 # DNS
 
 #variable "dns_domain" {}
+
+# Sealed secrets
+variable "sealed_secrets_enabled" {
+  default = true
+  type = bool
+}
+
+variable "sealed_secrets_version" {
+  default = "v0.9.5"
+}

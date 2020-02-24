@@ -13,10 +13,10 @@ resource "helm_release" "flux" {
     value = "git@github.com:kadamone/flux-first-test" #var.flux_git_url
   }
 
-#  set {
-#    name  = "git.path"
-#    value = "/flux-first-test.git" #var.flux_git_path
-#  }
+  set {
+    name  = "git.path"
+    value = "dev" #var.flux_git_path
+  }
 
   set {
     name  = "git.secretName"
