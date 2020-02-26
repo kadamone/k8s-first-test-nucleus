@@ -15,7 +15,7 @@ resource "helm_release" "flux" {
 
   set {
     name  = "git.path"
-    value = "dev" #var.flux_git_path
+    value = var.flux_git_path
   }
 
   set {

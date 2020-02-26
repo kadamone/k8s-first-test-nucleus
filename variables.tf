@@ -1,21 +1,21 @@
 # Google
 
 variable "google_project_id" {
-  default = "flask-app-262012"
+  #default = "flask-app-262012"
 }
 
 variable "google_region" {
-  default = "us-central1"
+  #default = "us-central1"
 }
 variable "google_zone" {
-  default = "us-central1-a"
+  #default = "us-central1-a"
 }
 #variable "environment_name" {}
 
 # Kubernetes - K8S
 
 variable "k8s_cluster_name" {
-  default = "kadamone-cluster"
+  #default = "kadamone-cluster"
 }
 
 #variable "k8s_node_pools" {
@@ -61,26 +61,26 @@ variable "k8s_namespaces" {
 # HELM
 
 variable "tiller_version" {
-  default = "v2.15.1"
+  #default = "v2.15.1"
 }
 
 # flux
 
 variable "flux_git_url" {
-  default = "git@github.com:kadamone"
+  #default = "git@github.com:kadamone"
 }
 
 variable "flux_git_path" {
-  default = "/"
+  #default = "dev"
 }
 
 variable "flux_version" {
-  default = "1.18.0"
+  #default = "1.18.0"
 }
 
 variable "flux_enabled" {
-  default = true
   type = bool
+  default = true
 }
 
 variable "flux_manifest_generation" {
@@ -90,30 +90,30 @@ variable "flux_manifest_generation" {
 
 # POSTGRES
 variable "postgres_machine_type" {
-  default = "db-f1-micro"
+  #default = "db-f1-micro"
 }
 
 variable "postgres_database_version" {
-  default = "POSTGRES_11" # Postgres version
+  #default = "POSTGRES_11" # Postgres version
 }
 
 variable "postgres_enabled" {
-  default = false # Enable and disable postgres
+  #default = false # Enable and disable postgres
   type = bool
 }
 
 # MYSQL
 
 variable "mysql_machine_type" {
-  default = "db-f1-micro"
+  #default = "db-f1-micro"
 }
 
 variable "mysql_database_version" {
-  default = "MYSQL_5_7" # Mysql database version
+  #default = "MYSQL_5_7" # Mysql database version
 }
 
 variable "mysql_enabled" {
-  default = false # Enable and disable mysql
+  #default = false # Enable and disable mysql
   type = bool
 }
 
@@ -123,10 +123,10 @@ variable "mysql_enabled" {
 
 # Sealed secrets
 variable "sealed_secrets_enabled" {
-  default = true
+  #default = true
   type = bool
 }
 
 variable "sealed_secrets_version" {
-  default = "v0.9.5"
+  #default = "v0.9.5"
 }
