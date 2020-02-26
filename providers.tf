@@ -2,6 +2,7 @@ provider "google" {
 #  credentials = file("/home/radu/terraform/gcp-key/flask-app-fe18fe252bab.json")
   #credentials = var.credentials_file
 
+  credentials = file("flask-app-fe18fe252bab.json")
   project = var.google_project_id
   region  = var.google_region
   #zone    = var.zone

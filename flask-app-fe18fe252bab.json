@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "flask-app-262012",
+  "private_key_id": "fe18fe252babedc961fd6d716fefb07a57a9d234",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPnIKNvt4IgUua\nhPNtCSjv/F3YXe2fOQNBOi+BGdzFVq632dCEgmxoXYbAOLOLemWASV5w7mq/hzMj\n1aPJUjFg2SctjuHk4ON7Vks56qKCgLdUqeQxkJoBdy1X4JYovKC1MMQooE9yWNQn\nciiEdM8Me10xywi1pXJJPKi9qmYBXGumsJ+t1p/UT/pCCz1t8fBNMZZ6UNNGPU4Y\nVcCqeyt9zOFsPgwmCC2t6dd9b8cioK6iFw6Kd7NR7EcjNKh6i0pO20YCPdwUzsHZ\nYH2Ec/Ukzrh5hTFiX2Jehe38BVh5ag89+CkK8Z+79b2g0yOwIv4uF64LCUXk+or0\nLDktjO3NAgMBAAECggEAFccCkNDNJJI/dnlsuWrFDwtnYqtToiiOVVi/o+itFkwl\n7qYb79JogbgRyvcHqmFP5VmM3Qa9TtLlQ+SEljkXcePFbst2mZYXdpgSMwSQQGU1\nFd3uUF6tMOsp5/ZoeeRzbR4s7WAHhWSY+HxKkL5Z+6KzH2Z/RuKQbus8fgyyP4Ec\ncfaXEJcGrDePeIpg/2wWT6NSZbBfQ//1zY/5W5eitgUmFJv6wDiLthy1Z0P/c5TX\nrSLYfWYZGDRHPttx2w2WBuVDKKyNyEpyfnhwF6eRD2WhwMfN0HW1izEfo1Tp69Sf\noJoNCyT8wWcihuClYbat58S6jS4n/gEUa4+/kN1QsQKBgQDnoqSN9Jsfb0u/hhfh\nWKTKmeg1MKz2celJTEJVUqcrmOPR536g+ax70VtNiqQC5Ep08LdoTj74GHVXqo9p\nAweBCDnlxH2JgUw9LsePPnqr4knE/ehtd7yJ79W7w8g7kOJ3QYGMJpTHtulYUMJY\nZ+eNrjmPCE0ajIB5U9yR/gp1GQKBgQDlcvZgXaO5UvcrjjVAuEsqN2yubZDVy8X/\nCvsfsH6eIsUL893sMv6LM5ZlTl7aUsUmpVg3KR1cYkiJlIMJMOSfmyb82j2T6v6W\nlNownH4qciQWMWSMpNlmilUBB039zfn+Yp9A/1KWk33wt32dmFTGtbqe0Y2Ybna9\nICDDq1WA1QKBgBeK81iuRNn0EOndci3oOY+SBwTo9ptxxnk5tABCD1WiC325Hqiz\n17EZ/UKrVbIpi9vI34tNcJ78tWh8oGjW8vtNX70XtH62Uo5hY80OV5+Ct2a7O9Vs\ndxA5/SpBYueS+UGPueAJx9NoptzgEHC11tYSoC0Gdfe90g0C1gdMn7l5AoGBANfA\nv02kH4TvL75EDW0bHorG7SojmtJ+t2J4N+T3eEhIl5MCsEYfOV05mA0QoX6X4AzT\n41yTC6nIPT8paAHneMNgCEwxB0Ak81ozA+w76yMMi0RXE55wkICsSPwbm0myOoXq\nxKdArq8qZ31HfRYInIbxcVdP4t5X2M1D/asgW9k1AoGAFQwPSqdzR3FUjlbvGts8\nRpt8MI0G1sZAquFxyrTHXrp3msrGJDKUoRtG6y4MwP/3VRRxBniTGAjXk1BOBIHv\nnkA8QDv1flPSi1d22SVqTPD/bcrCjvbZD6SX+X3jPoudxDz6DxDilMA4abN4VKw3\nn0FltmxyCq2fFNXvusZsGJ0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "terraform-learn@flask-app-262012.iam.gserviceaccount.com",
+  "client_id": "112602312726227234873",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/terraform-learn%40flask-app-262012.iam.gserviceaccount.com"
+}
