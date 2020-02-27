@@ -26,6 +26,6 @@ output "cluster_name" {
   value = google_container_cluster.kube.name
 }
 
-output "sealed_secret_public_key" {
-  value = var.sealed_secrets_enabled ? tls_self_signed_cert.sealed_secrets.0.cert_pem : ""
-}
+#output "sealed_secret_public_key" {
+#  value = var.sealed_secrets_enabled ? tls_self_signed_cert.sealed_secrets.0.cert_pem : ""
+#}
