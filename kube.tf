@@ -24,9 +24,9 @@ resource "google_container_cluster" "kube" {
   name      = var.k8s_cluster_name
   location  = var.google_region
 
-  node_locations = ["us-central1-a"]
-  network = google_compute_network.vpc.self_link
-  subnetwork = google_compute_subnetwork.container_subnetwork.name
+  node_locations  = ["us-central1-a"]
+  network         = google_compute_network.vpc.self_link
+  subnetwork      = google_compute_subnetwork.container_subnetwork.name
 
   remove_default_node_pool = true
   initial_node_count = 1
@@ -47,7 +47,6 @@ resource "google_container_cluster" "kube" {
   }
 
   depends_on = [
-    google_project_service.serviceusage,
     google_project_service.container,
     google_project_service.compute,
     google_project_service.storage_api,
