@@ -22,9 +22,9 @@ locals {
 
 resource "google_container_cluster" "kube" {
   name      = var.k8s_cluster_name
-  location  = var.google_region
+  location  = "us-central1-a" #var.google_region
 
-  node_locations  = ["us-central1-a"]
+  #node_locations  = ["us-central1-a"]
   network         = google_compute_network.vpc.self_link
   subnetwork      = google_compute_subnetwork.container_subnetwork.name
 
