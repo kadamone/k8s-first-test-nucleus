@@ -59,7 +59,7 @@ resource "google_container_cluster" "kube" {
 resource "google_container_node_pool" "kube_nodes" {
 #  for_each    = local.k8s_node_pools
 
-  location    = "us-central1-a" #var.google_region
+  location    = var.google_region
 
   name        = "kadamone-node"#each.key
   cluster     = google_container_cluster.kube.name
