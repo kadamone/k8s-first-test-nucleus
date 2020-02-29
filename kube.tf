@@ -57,17 +57,17 @@ resource "google_container_cluster" "kube" {
 }
 
 resource "google_container_node_pool" "kube_nodes" {
-#  for_each    = local.k8s_node_pools
+  for_each    = local.k8s_node_pools
 
   location    = var.google_region
 
-  name        = "kadamone-node"#each.key
+  name        = each.key #"kadamone-node"
   cluster     = google_container_cluster.kube.name
 
-  node_count  = 3#each.value.node_count
+  node_count  = each.value.node_count #3
 
   node_config {
-    machine_type = "n1-standard-1"#each.value.machine_type
+    machine_type = each.value.machine_type #"n1-standard-1"
 
 #    dynamic "taint" {
 #      for_each = each.value.taints

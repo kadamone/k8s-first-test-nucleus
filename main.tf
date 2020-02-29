@@ -80,13 +80,3 @@ resource "google_project_service" "sqladmin" {
 
   depends_on = [google_project_service.serviceusage]
 }
-
-#resource "google_project_service" "cloudapis" {
-#  service = "logging.googleapis.com"
-
-#  depends_on = [
-#    google_project_service.monitoring,
-#    google_project_service.logging,
-#    google_project_service.storage_api,
-#    google_project_service.storage_component]
-#}

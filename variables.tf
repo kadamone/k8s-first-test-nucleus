@@ -30,7 +30,7 @@ variable "k8s_node_pools" {
     }))
     default = [{
       name = "nodes"
-      node_count = 1
+      node_count = 3
       machine_type = "n1-standard-1"
       taints = []
       }]
@@ -47,7 +47,7 @@ variable "k8s_namespaces" {
 #    uses_slack_alert    = bool     # If true you have to manually create the slack channel on slack
     }))
   default = [{
-    name                = "false-namespace"
+    name                = "kadamone-ns"
 #    has_public_ip       = true
 #    dns_records         = {}
     uses_mysql          = false
