@@ -66,9 +66,7 @@ variable "tiller_version" {
 
 # flux
 
-variable "flux_git_url" {
-  #default = "git@github.com:kadamone"
-}
+variable "flux_git_url" { } # default = "git@github.com:kadamone/flux-first-test"
 
 variable "flux_git_path" {
   #default = "dev"

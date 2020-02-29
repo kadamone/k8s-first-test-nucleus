@@ -10,7 +10,7 @@ resource "helm_release" "flux" {
 
   set {
     name  = "git.url"
-    value = "git@github.com:kadamone/flux-first-test" #var.flux_git_url
+    value = var.flux_git_url
   }
 
   set {
