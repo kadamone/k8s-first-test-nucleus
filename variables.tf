@@ -18,24 +18,24 @@ variable "k8s_cluster_name" {
   #default = "kadamone-cluster"
 }
 
-#variable "k8s_node_pools" {
-#  type = list(object({
-#    name          = string
-#    node_count    = number
-#    machine_type  = string
-#    taints = list(object({
-#      key     = string
-#      value   = string
-#      effect  = string
-#      }))
-#    }))
-#    default = [{
-#      name = "nodes"
-#      node_cout = 1
-#      machine_type = "n1-standard-1"
-#      taints = []
-#      }]
-#}
+variable "k8s_node_pools" {
+  type = list(object({
+    name          = string
+    node_count    = number
+    machine_type  = string
+    taints = list(object({
+      key     = string
+      value   = string
+      effect  = string
+      }))
+    }))
+    default = [{
+      name = "nodes"
+      node_cout = 1
+      machine_type = "n1-standard-1"
+      taints = []
+      }]
+}
 
 variable "k8s_namespaces" {
   type = list(object({
