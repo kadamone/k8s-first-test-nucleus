@@ -11,7 +11,7 @@ resource "kubernetes_secret" "mysql_root_user_secret" {
 
   metadata {
     name = "mysql-root"
-#    namespace = kubernetes_namespace.k8s_namespaces[each.key].metadata.0.name
+    namespace = kubernetes_namespace.k8s_namespaces[each.key].metadata.0.name
   }
 
   data = {
@@ -43,7 +43,7 @@ resource "kubernetes_config_map" "mysql_config" {
 
   metadata {
     name = "mysql"
-#    namespace = kubernetes_namespace.k8s.namespace[each.key].metadata.0.name
+    namespace = kubernetes_namespace.k8s.namespace[each.key].metadata.0.name
   }
 
   data = {

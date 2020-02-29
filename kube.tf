@@ -10,15 +10,15 @@ locals {
   }
 }
 
-#resource "kubernetes_namespace" "k8_namespace" {
-#  for_each = local.k8s_namespaces
+resource "kubernetes_namespace" "k8_namespace" {
+  for_each = local.k8s_namespaces
 
-#  metadata {
-#    name = each.key
-#  }
+  metadata {
+    name = each.key
+  }
 
-#  depends_on = [google_container_cluster.kube, google_container_node_pool.kube_nodes]
-#}
+  depends_on = [google_container_cluster.kube, google_container_node_pool.kube_nodes]
+}
 
 resource "google_container_cluster" "kube" {
   name      = var.k8s_cluster_name

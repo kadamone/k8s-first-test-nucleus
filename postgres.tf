@@ -11,7 +11,7 @@ resource "kubernetes_secret" "postgres_root_user_secret" {
 
   metadata {
     name = "postgres-root"
-    #namespace = kubernetes_namespace.k8s_namespace[each.key].metadata.0.name
+    namespace = kubernetes_namespace.k8s_namespace[each.key].metadata.0.name
   }
 
   data = {
@@ -43,7 +43,7 @@ resource "kubernetes_config_map" "postgres_config" {
 
   metadata {
     name = "postgres"
-#    namespace = kubernetes_namespace.k8s_namespace[each.key].metadata.0.name
+    namespace = kubernetes_namespace.k8s_namespace[each.key].metadata.0.name
   }
 
   data = {

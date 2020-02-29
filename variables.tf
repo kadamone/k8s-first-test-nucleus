@@ -35,8 +35,8 @@ variable "k8s_namespaces" {
 #    dns_records         = set(string)
     uses_postgres       = bool        # If set true postgres_enabled should be true
     uses_mysql          = bool        # if set true mysql_enabled should be true
-#    uses_mongodb_atlas  = bool
-#    uses_slack_alert    = bool     # If true you have to manually create the slack channel on slack
+    uses_mongodb_atlas  = bool
+    uses_slack_alert    = bool     # If true you have to manually create the slack channel on slack
     }))
   default = [{
     name                = "kadamone-ns"
@@ -44,8 +44,8 @@ variable "k8s_namespaces" {
 #    dns_records         = {}
     uses_mysql          = false
     uses_postgres       = false
-#    uses_mongodb_atlas  = false
-#    uses_slack_alert    = false
+    uses_mongodb_atlas  = false
+    uses_slack_alert    = false
     }]
 }
 
