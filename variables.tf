@@ -78,7 +78,7 @@ variable "flux_version" {
 
 variable "flux_enabled" {
   type = bool
-  default = true
+  default = false
 }
 
 variable "flux_manifest_generation" {
