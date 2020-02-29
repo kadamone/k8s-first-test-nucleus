@@ -10,7 +10,7 @@ locals {
   }
 }
 
-resource "kubernetes_namespace" "k8_namespace" {
+resource "kubernetes_namespace" "k8s_namespace" {
   for_each = local.k8s_namespaces
 
   metadata {
