@@ -1,10 +1,10 @@
-#locals {
-#  public_ip_namespaces = {
-#    for namespace in var.k8s_namespaces:
-#      namespace.name => namespace
-#    if namespace.has_public_ip
-#  }
-#}
+locals {
+  public_ip_namespaces = {
+    for namespace in var.k8s_namespaces:
+      namespace.name => namespace
+    if namespace.has_public_ip
+  }
+}
 
 resource "google_compute_network" "vpc" {
 
@@ -21,9 +21,9 @@ resource "google_compute_subnetwork" "container_subnetwork" {
 }
 
 resource "google_compute_global_address" "namespace_public_ip" {
-#  for_each = local.public_ip_namespaces
+  for_each = local.public_ip_namespaces
 
-  name = "kadamone-public-ip" #"${each.key}-public-ip"
+  name = "${each.key}-public-ip" #"kadamone-public-ip"
 
   depends_on = [google_project_service.compute]
 }

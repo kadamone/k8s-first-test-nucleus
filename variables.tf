@@ -39,7 +39,7 @@ variable "k8s_node_pools" {
 variable "k8s_namespaces" {
   type = list(object({
     name                = string      # Name of the namespace
-#    has_public_ip       = bool
+    has_public_ip       = bool
 #    dns_records         = set(string)
     uses_postgres       = bool        # If set true postgres_enabled should be true
     uses_mysql          = bool        # if set true mysql_enabled should be true
@@ -48,7 +48,7 @@ variable "k8s_namespaces" {
     }))
   default = [{
     name                = "kadamone-ns"
-#    has_public_ip       = true
+    has_public_ip       = false
 #    dns_records         = {}
     uses_mysql          = false
     uses_postgres       = false
