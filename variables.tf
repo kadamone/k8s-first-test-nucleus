@@ -4,9 +4,8 @@ variable "google_project_id" {
   #default = "flask-app-262012"
 }
 
-variable "google_region" {
-  #default = "us-central1"
-}
+variable "google_region" {}  #default = "us-central1"
+
 variable "google_zone" {
   #default = "us-central1-a"
 }
