@@ -1,14 +1,14 @@
-#locals {
-#  k8s_namespaces = {
-#    for namespace in var.k8s_namespaces:
-#    namespace.name => namespace
-#  }
+locals {
+  k8s_namespaces = {
+    for namespace in var.k8s_namespaces:
+    namespace.name => namespace
+  }
 
 #  k8s_node_pools = {
 #    for node in var.k8s_node_pools:
 #    node.name => node
 #  }
-#}
+}
 
 #resource "kubernetes_namespace" "k8_namespace" {
 #  for_each = local.k8s_namespaces
