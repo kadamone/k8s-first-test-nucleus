@@ -4,10 +4,10 @@ locals {
     namespace.name => namespace
   }
 
-#  k8s_node_pools = {
-#    for node in var.k8s_node_pools:
-#    node.name => node
-#  }
+  k8s_node_pools = {
+    for node in var.k8s_node_pools:
+    node.name => node
+  }
 }
 
 #resource "kubernetes_namespace" "k8_namespace" {
