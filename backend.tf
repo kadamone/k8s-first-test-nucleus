@@ -1,6 +1,7 @@
 terraform {
     backend "remote" {
-        organization = "kandamone-team"
+        organization = "kadamone-team"
+
         workspaces {
             name = "k8s-first-test"
         }
