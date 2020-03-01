@@ -32,21 +32,21 @@ variable "k8s_namespaces" {
   type = list(object({
     name                = string      # Name of the namespace
     has_public_ip       = bool
-#    dns_records         = set(string)
+    dns_records         = set(string)
     uses_postgres       = bool        # If set true postgres_enabled should be true
     uses_mysql          = bool        # if set true mysql_enabled should be true
     uses_mongodb_atlas  = bool
     uses_slack_alert    = bool     # If true you have to manually create the slack channel on slack
     }))
-  default = [{
-    name                = "kadamone-ns"
-    has_public_ip       = false
+#  default = [{
+#    name                = "kadamone-ns"
+#    has_public_ip       = false
 #    dns_records         = {}
-    uses_mysql          = false
-    uses_postgres       = false
-    uses_mongodb_atlas  = false
-    uses_slack_alert    = false
-    }]
+#    uses_mysql          = false
+#    uses_postgres       = false
+#    uses_mongodb_atlas  = false
+#    uses_slack_alert    = false
+#    }]
 }
 
 # HELM
