@@ -43,7 +43,7 @@ resource "kubernetes_config_map" "mysql_config" {
 
   metadata {
     name = "mysql"
-    namespace = kubernetes_namespace.k8s.namespaces[each.key].metadata.0.name
+    namespace = kubernetes_namespace.k8s_namespaces[each.key].metadata.0.name
   }
 
   data = {
